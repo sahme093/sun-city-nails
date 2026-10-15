@@ -10,7 +10,7 @@ export default function Gallery() {
       <div className="gallery">
         {salon.gallery.items.map((g, i) => (
           <figure key={i} className="gallery-item">
-            <img src={g.src} alt={g.label} loading="lazy" />
+            <img src={g.src} alt={g.label} loading="lazy" style={{ objectPosition: g.position }} />
             <figcaption>{g.label}</figcaption>
           </figure>
         ))}

@@ -3,89 +3,89 @@
 //  Everything specific to one salon lives in this file. Edit the values below,
 //  replace the photos in public/img/, and the whole site updates.
 //
-//  After changing `name`, `logoLetter`, `seo` or `theme`, restart `npm run dev`
+//  After changing `name`, `seo` or `theme`, restart `npm run dev`
 //  so the browser-tab title and icon pick up the change.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const salon = {
   // Shown in the header, footer, browser tab and the text message.
-  name: 'Salon Name',
-
-  // Letter inside the arch logo (browser tab icon).
-  logoLetter: 'S',
+  name: 'Sun City Nails',
 
   // Big headline at the top. `accent` is shown in italics.
-  heroTitle: { lead: 'Salon', accent: 'Name' },
+  heroTitle: { lead: 'Sun City', accent: 'Nails' },
 
-  // Small gold line above the headline.
-  eyebrow: 'Hair salon · Your City, ST',
+  // Small line above the headline.
+  eyebrow: 'Nail salon · Menifee, CA',
 
   // One-sentence description under the headline.
-  tagline: 'Welcoming hair salon offering professional haircuts and customized hair coloring.',
+  tagline: 'Established nail salon providing professional manicure and pedicure services. Walk-ins welcome.',
 
   // Short quote beside the hero photos (desktop only). Use a real review line.
-  heroQuote: '“Short quote from a happy client goes here.”',
+  heroQuote: '“My nails have never looked this good.” — Billie S.',
 
   phone: {
-    display: '(555) 555-5555',
+    display: '(951) 679-5428',
     // Same number in international format: + country code, then digits only.
-    e164: '+15555555555',
+    e164: '+19516795428',
   },
 
   address: {
-    street: '123 Main Street',
-    cityLine: 'Your City, ST 00000',
+    street: '27388 Sun City Blvd, Suite F',
+    cityLine: 'Menifee, CA 92586',
     // Shorter version used in the hero facts row.
-    short: '123 Main St, Your City',
+    short: '27388 Sun City Blvd, Menifee',
   },
 
   // Exactly 7 days, Monday first. Mark closed days with `closed: true`
   // (the booking form warns customers who pick one).
   hours: [
-    { day: 'Monday', time: '9am – 5pm' },
-    { day: 'Tuesday', time: '9am – 5pm' },
-    { day: 'Wednesday', time: '9am – 5pm' },
-    { day: 'Thursday', time: '9am – 5pm' },
-    { day: 'Friday', time: '9am – 5pm' },
+    { day: 'Monday', time: '9am – 6pm' },
+    { day: 'Tuesday', time: '9am – 6pm' },
+    { day: 'Wednesday', time: '9am – 6pm' },
+    { day: 'Thursday', time: '9am – 6pm' },
+    { day: 'Friday', time: '9am – 6pm' },
     { day: 'Saturday', time: '9am – 5pm' },
     { day: 'Sunday', time: 'Closed', closed: true },
   ],
 
   // One-line summaries used in the hero, footer and mobile "Visit" section.
   hoursSummary: {
-    open: 'Mon–Sat 9am–5pm',
+    open: 'Mon–Fri 9–6 · Sat 9–5',
     closed: 'Sunday',
   },
 
   // Browser tab title and Google description.
   seo: {
-    title: 'Salon Name · Hair Salon in Your City, ST',
+    title: 'Sun City Nails · Nail Salon in Menifee, CA',
     description:
-      'Salon Name — welcoming hair salon in Your City, ST offering professional haircuts and customized hair coloring.',
+      'Sun City Nails — established nail salon in Menifee, CA providing professional manicure, pedicure, acrylic, gel, dip powder and waxing services.',
   },
 
-  // Brand colors. `primary` is the dark background; `accent` is buttons and highlights.
+  // Brand colors. `primary` is the dark background; `accent` is buttons, highlights
+  // and the logo's nail rays; `sun` is the logo's sun and sparkle.
   theme: {
-    primary: '#1f3328',
-    accent: '#d9bd85',
-    accentHover: '#e6cd99',
-    accentDeep: '#8a6a35', // darker accent for small labels on light backgrounds
+    primary: '#3d1d3f',
+    accent: '#f7a8c4',
+    accentHover: '#fbc4d8',
+    accentDeep: '#a8366b', // darker accent for small labels on light backgrounds
+    sun: '#ffc48f',
   },
 
   // Photos live in public/img/. Swap the files, or change the paths here.
   images: {
-    heroArch: { src: '/img/hero.svg', alt: 'Hair styled at the salon' },
-    heroSide: { src: '/img/hero-side.svg', alt: 'Hair styled at the salon' },
+    heroArch: { src: '/img/glitter-stiletto.jpg', alt: 'Glitter stiletto nails done at Sun City Nails' },
+    heroSide: { src: '/img/mauve-glitter-flower.jpg', alt: 'Mauve nails with a glitter accent and flower art' },
   },
 
+  // Optional `position` on an item picks which part of a wide photo stays in frame.
   gallery: {
-    note: 'Color, cuts and styling from our chairs.',
+    note: 'Gel, acrylic, chrome and hand-painted art from our tables.',
     items: [
-      { src: '/img/gallery-1.svg', label: 'Look one' },
-      { src: '/img/gallery-2.svg', label: 'Look two' },
-      { src: '/img/gallery-3.svg', label: 'Look three' },
-      { src: '/img/gallery-4.svg', label: 'Look four' },
-      { src: '/img/gallery-5.svg', label: 'Look five' },
+      { src: '/img/pastel-swirl.jpg', label: 'Pastel swirl almonds', position: '88% 50%' },
+      { src: '/img/green-chrome.jpg', label: 'Emerald chrome' },
+      { src: '/img/glitter-stiletto.jpg', label: 'Glitter stilettos' },
+      { src: '/img/mauve-glitter-flower.jpg', label: 'Mauve & flower accent' },
+      { src: '/img/color-swatches.jpg', label: 'Hundreds of colors' },
     ],
   },
 
@@ -93,33 +93,72 @@ const salon = {
     note: "Not sure what to book? Text us a photo of what you have in mind and we'll point you to the right service.",
     groups: [
       {
-        name: 'Cut & style',
-        items: ['Haircut', 'Bang trim', 'Blowout', 'Hairstyling', 'Updos'],
+        name: 'Manicure & pedicure',
+        items: [
+          'Manicure',
+          'Gel manicure',
+          'French manicure',
+          'Pedicure',
+          'Callus removal',
+          'Buff shine',
+          'Nail cut & filing',
+          'Polish change',
+          'Gel color change',
+          'Polish removal',
+        ],
       },
       {
-        name: 'Color',
-        items: ['Hair coloring', 'Balayage', 'Highlights', 'Gloss or glaze'],
+        name: 'Full sets & nail art',
+        items: [
+          'Acrylic nails',
+          'Full set with gel color',
+          'Full pink & white powder set',
+          'Dip powder',
+          'Nail designs',
+          'Nail repair',
+        ],
       },
       {
-        name: 'Treatments',
-        items: ['Keratin treatment', 'Hydration treatment', 'Hair extensions'],
+        name: 'Waxing',
+        items: ['Eyebrow waxing', 'Facial waxing', 'Full arm waxing', 'Full leg waxing', 'Brazilian waxing'],
       },
     ],
   },
 
   reviews: {
-    note: 'From recent Google reviews',
+    note: 'From Google reviews',
     // Paste real reviews (with permission). 3–6 works best.
     items: [
-      { name: 'Client name', when: '1 month ago', text: 'Review text goes here. Paste a real review from Google or Yelp.' },
-      { name: 'Client name', when: '2 months ago', text: 'Review text goes here. Longer reviews are fine — on phones they are trimmed to about eight lines.' },
-      { name: 'Client name', when: '3 months ago', text: 'Review text goes here.' },
-      { name: 'Client name', when: '4 months ago', text: 'Review text goes here.' },
+      {
+        name: 'Billie S.',
+        when: '9 months ago',
+        text: 'Just had my nails done by Philip at Sun City Nails—amazing! Got a full set, right on time, and my nails have never looked this good. He’s fast, precise, and really knows his stuff. Made the whole appointment easy and actually enjoyable. Definitely going back.',
+      },
+      {
+        name: 'Jackie C.',
+        when: '2 months ago',
+        text: 'Cute, they were sweet and nailed it lol. I showed him what I wanted and he added his twist and I love them.',
+      },
+      {
+        name: 'Mercedes F.',
+        when: '6 months ago',
+        text: 'I have been going there for quite some time and very pleased with the work they do. I always ask for Phillip because he does a great job and is gentle and polite. I recommend him in the shop highly.',
+      },
+      {
+        name: 'Lorraine A.',
+        when: '8 months ago',
+        text: 'I was a walk in for a fill. They did a great job. I would come back.',
+      },
+      {
+        name: 'Nikki A.',
+        when: '3 years ago',
+        text: 'This was my 1st time and I love it. My nails came out as expected. It was quick and everyone there was so nice. I called to see if I needed to make an appt and they said come in so I did. Thank you to my new nail technician, she was so sweet.',
+      },
     ],
   },
 
   booking: {
-    notesPlaceholder: 'e.g. Virgin hair, want low-maintenance highlights, not too blonde',
+    notesPlaceholder: 'e.g. Gel fill, almond shape, pastel swirl design like the photo',
   },
 };
 

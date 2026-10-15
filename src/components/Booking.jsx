@@ -72,7 +72,7 @@ export default function Booking({ form, setForm, request }) {
                 <span className="desktop-only-inline">Anything we should know?</span>
                 <span className="mobile-only-inline">Notes</span>
               </span>
-              <span className="field-hint desktop-only">Current color, hair length, inspiration</span>
+              <span className="field-hint desktop-only">Shape, length, colors, inspiration</span>
               <textarea
                 value={form.notes}
                 onChange={set('notes')}

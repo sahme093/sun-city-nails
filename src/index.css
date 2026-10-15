@@ -1,22 +1,23 @@
 :root {
-  --green: #1f3328;
-  --green-bubble: #2f7d5b;
-  --brass: #d9bd85;
-  --brass-hover: #e6cd99;
-  --brass-deep: #8a6a35;
-  --star: #b08c4f;
-  --cream: #f6f2ea;
-  --cream-card: #f9f6f0;
-  --cream-chip: #fbf9f4;
-  --sand: #ece5d6;
-  --ink: #1e221f;
-  --muted: #5b5f57;
-  --on-green: #d8d3c6;
-  --on-green-soft: #e8e1d2;
-  --on-green-faint: #b9b4a6;
-  --line: #d6cfbf;
-  --line-soft: #e3ddcf;
-  --serif: 'Bodoni Moda', Georgia, serif;
+  --green: #3d1d3f;
+  --green-bubble: #b8457c;
+  --brass: #f7a8c4;
+  --brass-hover: #fbc4d8;
+  --brass-deep: #a8366b;
+  --star: #e0789f;
+  --sun: #ffc48f;
+  --cream: #fdf5f3;
+  --cream-card: #fffaf9;
+  --cream-chip: #ffffff;
+  --sand: #f9e4ec;
+  --ink: #2a1a2b;
+  --muted: #6b5a68;
+  --on-green: #e6d4e0;
+  --on-green-soft: #f3e6ee;
+  --on-green-faint: #c3abbd;
+  --line: #ecd3dc;
+  --line-soft: #f3e2e8;
+  --serif: 'Fraunces', Georgia, serif;
   --sans: Manrope, system-ui, sans-serif;
   --gutter: 20px;
   --mobile-bar-h: 88px;
@@ -82,6 +83,9 @@ em {
 
 /* ---------- shared bits ---------- */
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--serif);
   font-style: italic;
   font-size: 21px;
@@ -90,6 +94,11 @@ em {
 }
 .brand:hover {
   color: var(--cream);
+}
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  flex: none;
 }
 
 .eyebrow {
@@ -202,7 +211,10 @@ em {
 
 /* ---------- hero ---------- */
 .hero {
-  background: var(--green);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 196, 143, 0.16), transparent 42%),
+    radial-gradient(circle at 10% 95%, rgba(247, 168, 196, 0.14), transparent 45%),
+    var(--green);
   color: var(--cream);
   padding: 12px var(--gutter) 36px;
   display: flex;
@@ -279,7 +291,7 @@ em {
   width: 100%;
   height: 290px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 100px 100px 10px 10px;
 }
 .gallery-item figcaption {
   font-size: 13px;
@@ -349,7 +361,7 @@ em {
   flex: 0 0 300px;
   scroll-snap-align: start;
   background: var(--cream-card);
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 22px;
   display: flex;
   flex-direction: column;
@@ -597,6 +609,10 @@ em {
   .site-header {
     padding: 22px var(--gutter);
   }
+  .site-header .brand-mark {
+    width: 44px;
+    height: 44px;
+  }
   .site-header .brand {
     font-size: 26px;
     letter-spacing: 0.01em;
@@ -649,6 +665,7 @@ em {
     aspect-ratio: 3 / 5;
     object-fit: cover;
     border-radius: 220px 220px 6px 6px;
+    box-shadow: 0 0 0 6px rgba(247, 168, 196, 0.18);
   }
   .hero-media-col {
     display: flex;
@@ -909,7 +926,7 @@ em {
     font-size: 15px;
   }
   .hours-row.is-closed {
-    color: #8a8578;
+    color: #a08a98;
   }
   .hours-row.is-today {
     font-weight: 700;
